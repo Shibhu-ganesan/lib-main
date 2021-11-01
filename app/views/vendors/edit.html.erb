@@ -1,0 +1,25 @@
+
+<style>
+  .tbl-content{
+  height:500px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px;
+  color: white;
+}
+</style>
+	<br><br>
+<br><br>
+<div class="tbl-content">
+
+
+<h1>Editing Vendor</h1>
+
+<%= render 'form', vendor: @vendor %>
+
+<%= link_to 'Show', @vendor %> |
+<%= link_to 'Back', vendors_path %>
+</div>

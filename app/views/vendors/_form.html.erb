@@ -1,0 +1,40 @@
+<style type="text/css">
+  .form-control1{
+    background: none;
+    border: none;
+    border-bottom: solid white thin;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    width: 400px;
+  }
+  
+</style>
+
+<%= form_with(model: vendor) do |form| %>
+  <% if vendor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vendor.errors.count, "error") %> prohibited this vendor from being saved:</h2>
+
+      <ul>
+        <% vendor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :vendor_name %><br>
+    <%= form.text_field :vendor_name,class:"form-control1" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vendor_mail %><br>
+    <%= form.text_field :vendor_mail,class:"form-control1" %>
+  </div><br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div><br>
+<% end %>
